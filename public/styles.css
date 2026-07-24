@@ -233,3 +233,15 @@ button:disabled { opacity: .65; cursor: wait; }
 }
 
 /* KOTY SPONSORS END */
+
+.sponsor-email-link {
+  color: #1717b7;
+  font-weight: 1000;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.sponsor-email-link:hover,
+.sponsor-email-link:focus-visible {
+  color: #e83d22;
+}
