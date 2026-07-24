@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f4ed" />
+  <title>King of the Yard — September 26</title>
+  <meta name="description" content="RSVP and sign the event waiver for King of the Yard, presented by 5150 BMX in Sandy, Utah." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="event-title">
+      <div class="paper flyer-wrap"><img src="/flyer.png" alt="King of the Yard event flyer" class="flyer" /></div>
+      <div class="intro">
+        <p class="eyebrow">5150 BMX PRESENTS</p>
+        <h1 id="event-title">King of the Yard</h1>
+        <p class="date">September 26, 2026 · 820 E 9990 S · Sandy, Utah 84094</p>
+        <p>Cash prize, high jump, food, drinks, and a backyard full of BMX chaos.</p>
+        <a class="button" href="#rsvp">RSVP + Sign Waiver</a>
+      </div>
+    </section>
+
+    <section id="rsvp" class="form-section">
+      <div class="section-heading">
+        <p class="eyebrow">ENTRY FORM</p>
+        <h2>RSVP + Waiver</h2>
+        <p>Each participant must submit a form. Anyone under 18 must have a parent or legal guardian complete the guardian section, sign, remain physically present, and actively supervise them during participation.</p>
+      </div>
+
+      <form id="rsvpForm" novalidate>
+        <h3 class="form-title">Participant information</h3>
+        <div class="grid two">
+          <label>Full legal name <span>*</span><input name="fullName" autocomplete="name" required /></label>
+          <label>Email <span>*</span><input name="email" type="email" autocomplete="email" required /></label>
+          <label>Phone <span>*</span><input name="phone" type="tel" autocomplete="tel" required /></label>
+          <label>Date of birth <span>*</span><input name="dateOfBirth" type="date" required /></label>
+        </div>
+        <p class="age-display"><strong>Age:</strong> <span id="calculatedAge">Enter a valid birth date</span></p>
+        <label>Home address <span>*</span><input name="participantAddress" autocomplete="street-address" required /></label>
+
+        <h3 class="form-title">Emergency contact</h3>
+        <div class="grid two">
+          <label>Emergency contact name <span>*</span><input name="emergencyContactName" required /></label>
+          <label>Emergency contact phone <span>*</span><input name="emergencyContactPhone" type="tel" required /></label>
+          <label>Relationship <span>*</span><input name="emergencyContactRelationship" required /></label>
+        </div>
+
+        <label>How are you attending? <span>*</span>
+          <select name="attendanceType" required>
+            <option value="">Choose one</option><option value="rider">Rider</option><option value="spectator">Spectator</option><option value="volunteer">Volunteer</option><option value="sponsor">Sponsor</option><option value="other">Other</option>
+          </select>
+        </label>
+        <label>Anything organizers should know?<textarea name="notes" rows="4" placeholder="Medical or accessibility information, volunteer details, sponsor notes, etc."></textarea></label>
+
+        <section id="minorSection" class="minor-section" hidden>
+          <h3>Required parent or legal guardian information</h3>
+          <p>The signing adult must have legal authority, be at least 18 on the event date, remain physically present, and actively supervise the minor throughout participation.</p>
+          <div class="grid two">
+            <label>Guardian full legal name <span>*</span><input name="guardianName" data-minor-required="true" /></label>
+            <label>Relationship to minor <span>*</span><input name="guardianRelationship" data-minor-required="true" /></label>
+            <label>Guardian date of birth <span>*</span><input name="guardianDateOfBirth" type="date" data-minor-required="true" /></label>
+            <label>Guardian phone <span>*</span><input name="guardianPhone" type="tel" data-minor-required="true" /></label>
+            <label>Guardian email <span>*</span><input name="guardianEmail" type="email" data-minor-required="true" /></label>
+            <label>Guardian address <span>*</span><input name="guardianAddress" data-minor-required="true" /></label>
+          </div>
+          <label class="check"><input name="minorAcknowledged" type="checkbox" data-minor-required="true" /><span>The minor understands the safety rules and agrees to follow them. <b>*</b></span></label>
+          <label class="check"><input name="guardianAuthority" type="checkbox" data-minor-required="true" /><span>I certify that I am the participant's parent or legal guardian and have authority to consent. <b>*</b></span></label>
+          <label class="check"><input name="guardianConsent" type="checkbox" data-minor-required="true" /><span>I consent to the minor's participation and accept this agreement personally and on the minor's behalf to the fullest extent permitted by law. <b>*</b></span></label>
+          <label class="check"><input name="guardianPresent" type="checkbox" data-minor-required="true" /><span>I will remain physically present, available by phone, and actively supervise the minor throughout participation. <b>*</b></span></label>
+          <label>Guardian electronic signature — type the guardian's full legal name <span>*</span><input name="guardianSignature" data-minor-required="true" /></label>
+        </section>
+
+        <div class="waiver-box">
+          <h3>Participant Release, Waiver of Liability, Assumption of Risk, Indemnification, Medical Consent, and Media Terms</h3>
+          <div id="waiverText" class="waiver-copy" tabindex="0">
+            <p><strong>Event:</strong> King of the Yard BMX Event; <strong>Presented by:</strong> 5150 BMX; <strong>Date:</strong> September 26, 2026; <strong>Location:</strong> 820 E 9990 S, Sandy, Utah 84094.</p>
+            <p><strong>1. Activities.</strong> I understand that participation or attendance may include BMX riding, practice, competition, demonstrations, jumping, tricks, racing, freestyle riding, use of ramps, jumps, dirt features, concrete, pavement, wood or metal structures, rails, platforms, transitions, obstacles, uneven surfaces, staging, setup, course inspection, warm-up, awards, cleanup, and presence near riders, bicycles, equipment, vehicles, temporary structures, spectators, volunteers, vendors, and event operations (collectively, the “Activities”).</p>
+            <p><strong>2. Acknowledgment of risk.</strong> BMX and the Activities are inherently dangerous and may cause serious injury, permanent disability, paralysis, property damage, or death. Risks include falls, crashes, loss of control, improper landings, collisions, equipment failure, improperly adjusted equipment, defects or movement of ramps and obstacles, uneven or slippery surfaces, weather, heat, cold, wind, rain, poor visibility, debris, actions or omissions of participants and others, delayed or unavailable medical care, and risks arising from my condition, judgment, ability, or failure to follow instructions. These risks may be known or unknown, obvious or hidden, anticipated or unanticipated. Protective equipment reduces but does not eliminate risk.</p>
+            <p><strong>3. Voluntary participation and assumption of risk.</strong> I voluntarily choose to enter the property and participate in or attend the Activities. I knowingly and freely accept and assume all risks of injury, illness, death, loss, and property damage arising from or related to the Activities, including risks caused by my actions, other persons, property or equipment conditions, or the ordinary negligence of a Released Party, to the fullest extent permitted by Utah law.</p>
+            <p><strong>4. Safety obligations.</strong> I will wear a properly fitted bicycle helmet whenever riding; use a safe and appropriate bicycle and equipment; inspect the riding area and features; ride within my ability; follow posted rules and organizer instructions; not participate while impaired by alcohol, cannabis, illegal drugs, medication, fatigue, illness, or another impairing condition; immediately stop if conditions appear unsafe or I am injured or unwell; and avoid reckless, threatening, dangerous, or disruptive conduct. Event personnel may refuse or stop participation at any time for safety or conduct concerns. No organizer guarantees that the property, course, ramps, obstacles, or equipment are safe or suitable for me.</p>
+            <p><strong>5. Release and waiver.</strong> In consideration for permission to enter the property or participate, I, for myself and my heirs, estate, personal representatives, guardians, successors, and assigns, release and forever discharge 5150 BMX, King of the Yard, event organizers, promoters, hosts, sponsors, vendors, contractors, officials, volunteers, employees, agents, photographers, medical personnel, the owners, tenants, occupants, managers, and controllers of the event property, and each of their respective members, officers, directors, employees, agents, representatives, insurers, successors, and assigns (collectively, the “Released Parties”) from claims, demands, causes of action, damages, losses, costs, or liabilities arising from or related to my presence or participation, including claims arising from ordinary negligence, to the fullest extent permitted by law. This does not release conduct that cannot lawfully be released.</p>
+            <p><strong>6. Covenant not to sue and indemnification.</strong> I agree not to file, maintain, or assist in a claim against a Released Party concerning a matter covered by this agreement, except where a claim cannot legally be waived. To the fullest extent permitted by law, I agree to defend, indemnify, and hold harmless the Released Parties from claims, liabilities, damages, judgments, costs, and reasonable attorneys' fees arising from my acts or omissions, rule violations, damage or injury I cause, inaccurate information I provide, or a claim brought on my behalf that is covered by this agreement. A signing parent or legal guardian agrees personally and, to the fullest extent permitted by law, on behalf of the minor.</p>
+            <p><strong>7. Fitness and medical authorization.</strong> I represent that I am physically and mentally able to participate safely, have disclosed information event personnel reasonably need to know, and am not aware of a restriction that makes participation unsafe. I am responsible for medication and medical equipment I may need. If I am injured or become ill, I authorize reasonable first aid, contact with emergency services, ambulance transportation, disclosure of relevant information to medical personnel, and emergency evaluation or treatment when I cannot consent. Released Parties do not guarantee medical personnel will be present and have no duty to provide medical care. I accept responsibility for all related costs.</p>
+            <p><strong>8. Property and equipment.</strong> I am responsible for my bicycle, protective gear, vehicle, electronics, and personal property. Released Parties are not responsible for theft, loss, or damage except where liability cannot legally be waived.</p>
+            <p><strong>9. Participants under 18.</strong> A participant under 18 may not complete this agreement alone. A parent or legal guardian must review and sign it, certify legal authority, consent to participation, accept the risks and terms personally and on the minor's behalf to the fullest extent permitted by law, remain physically present, provide active supervision, remain available by phone, and ensure the minor follows safety rules. The adult may not leave the minor under the sole supervision of organizers, volunteers, property owners, or other participants. Event personnel may refuse or end participation if the supervising adult is absent, unavailable, or not providing adequate oversight.</p>
+            <p><strong>10. Media choice.</strong> The separate media selection below controls whether 5150 BMX, King of the Yard, sponsors, contractors, and designees may use identifiable photos, video, audio, name, image, likeness, voice, riding, or appearance for documentation, news, social media, websites, promotion, advertising, and archives without compensation. Incidental appearance in crowd or event footage may not always be avoidable. A parent or legal guardian makes this choice for a minor.</p>
+            <p><strong>11. Electronic signature and records.</strong> I agree to conduct this transaction electronically. Typing my full legal name and selecting the required acceptance checkbox constitute my electronic signature. The system may record the date and time, waiver version, exact waiver text or cryptographic hash, internet protocol address, browser information, and submission details and retain them as evidence of acceptance. My electronic signature is intended to have the same effect as a handwritten signature.</p>
+            <p><strong>12. Utah law; venue; severability.</strong> Utah law governs this agreement. Any dispute shall be brought in a court of competent jurisdiction in Salt Lake County, Utah, unless applicable law requires otherwise. If a provision is invalid or unenforceable, it will be modified or severed only to the minimum extent necessary, and the remainder will continue in effect.</p>
+            <p><strong>13. Entire agreement and acknowledgment.</strong> This is the complete agreement concerning the subjects it covers. I am not relying on a conflicting verbal promise. By signing, I confirm that I read and understand the entire agreement, understand that I am giving up substantial legal rights, had an opportunity to ask questions, sign voluntarily, provided accurate information, and agree to all terms.</p>
+          </div>
+          <label class="check"><input name="waiverAccepted" type="checkbox" required /><span>I have read, understand, and voluntarily agree to the complete waiver, release, assumption-of-risk, indemnification, medical-consent, and electronic-signature terms above. <b>*</b></span></label>
+          <fieldset class="media-choice">
+            <legend>Media release choice <span>*</span></legend>
+            <label class="radio"><input name="mediaReleaseChoice" type="radio" value="yes" required /><span>Yes, I authorize promotional use of identifiable event media.</span></label>
+            <label class="radio"><input name="mediaReleaseChoice" type="radio" value="no" required /><span>No, I do not authorize promotional use of identifiable event media.</span></label>
+          </fieldset>
+        </div>
+
+        <label>Participant electronic signature — type the participant's full legal name <span>*</span><input name="typedSignature" autocomplete="name" required /></label>
+        <button class="button submit" type="submit">Submit RSVP + Waiver</button>
+        <p id="formMessage" class="message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="legal-note"><strong>Legal review:</strong> This event-specific draft should be reviewed by a Utah attorney before registration is opened to the public, especially because it involves minors, BMX riding, and private property.</p>
+    </section>
+  </main>
+  <footer><p>5150 BMX · King of the Yard · September 26, 2026 · 820 E 9990 S, Sandy, Utah</p></footer>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

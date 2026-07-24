@@ -1,0 +1,20 @@
+ALTER TABLE rsvps ADD COLUMN age_on_event_date INTEGER;
+ALTER TABLE rsvps ADD COLUMN participant_address TEXT;
+ALTER TABLE rsvps ADD COLUMN emergency_contact_relationship TEXT;
+ALTER TABLE rsvps ADD COLUMN is_minor INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE rsvps ADD COLUMN guardian_name TEXT;
+ALTER TABLE rsvps ADD COLUMN guardian_relationship TEXT;
+ALTER TABLE rsvps ADD COLUMN guardian_date_of_birth TEXT;
+ALTER TABLE rsvps ADD COLUMN guardian_phone TEXT;
+ALTER TABLE rsvps ADD COLUMN guardian_email TEXT;
+ALTER TABLE rsvps ADD COLUMN guardian_address TEXT;
+ALTER TABLE rsvps ADD COLUMN guardian_present INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE rsvps ADD COLUMN guardian_authority_confirmed INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE rsvps ADD COLUMN guardian_consent_confirmed INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE rsvps ADD COLUMN minor_acknowledged INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE rsvps ADD COLUMN guardian_signature TEXT;
+ALTER TABLE rsvps ADD COLUMN waiver_text TEXT;
+ALTER TABLE rsvps ADD COLUMN waiver_text_hash TEXT;
+ALTER TABLE rsvps ADD COLUMN media_release_choice TEXT;
+
+CREATE INDEX IF NOT EXISTS idx_rsvps_is_minor ON rsvps(is_minor);

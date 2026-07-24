@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "king-of-the-yard-rsvp",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-07-24",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/admin/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "king_of_the_yard_rsvp",
+      "database_id": "9d4078e5-ca9f-4138-b3a8-2931a7a082b0",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "EVENT_NAME": "King of the Yard",
+    "EVENT_DATE": "2026-09-26",
+    "WAIVER_VERSION": "2026-07-24-full-minor-v2"
+  }
+}
