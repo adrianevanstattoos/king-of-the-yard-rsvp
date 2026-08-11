@@ -78,6 +78,17 @@ footer { padding: 26px 16px; text-align: center; color: var(--blue); font-weight
 .minor-section h3 { margin-top: 0; color: var(--red); text-transform: uppercase; }
 .media-choice { margin: 22px 0 0; border: 2px solid var(--blue); padding: 14px; }
 .media-choice legend { font-weight: 900; color: var(--blue); }
+
+.confirmation-panel {
+  background: rgba(255,255,255,.91); border: 3px solid var(--blue); padding: clamp(24px, 5vw, 48px);
+  box-shadow: 10px 10px 0 rgba(240,55,34,.72); text-align: center;
+}
+.confirmation-panel[hidden] { display: none; }
+.confirmation-eyebrow { color: var(--red); font-weight: 900; letter-spacing: .12em; margin: 0 0 6px; text-transform: uppercase; }
+.confirmation-panel h3 { margin: 0 0 14px; text-transform: uppercase; letter-spacing: -0.04em; color: var(--blue); font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; font-size: clamp(2rem, 6vw, 3.2rem); }
+.confirmation-panel p { margin: 0 0 12px; font-weight: 700; }
+.confirmation-note { color: var(--blue); }
+.confirmation-panel .button { margin-top: 12px; }
 .radio { display: grid; grid-template-columns: 24px 1fr; align-items: start; margin: 10px 0 0; }
 .radio input { width: 20px; height: 20px; margin-top: 1px; }
 .radio span { color: inherit; }

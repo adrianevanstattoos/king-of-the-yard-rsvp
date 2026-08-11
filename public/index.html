@@ -401,7 +401,16 @@
 
         <p id="formMessage" class="message" role="status" aria-live="polite"></p>
       </form>
-      <p class="legal-note">
+
+      <div id="confirmationPanel" class="confirmation-panel" hidden role="status" aria-live="polite" tabindex="-1">
+        <p class="confirmation-eyebrow">RSVP Confirmed</p>
+        <h3>Thank you for signing up!</h3>
+        <p id="confirmationDetail">Your RSVP and waiver have been received.</p>
+        <p class="confirmation-note">Your RSVP and waiver have been saved. You may screenshot this confirmation for your records. See you at King of the Yard on September 26, 2026.</p>
+        <button type="button" id="confirmationReset" class="button">Submit another RSVP</button>
+      </div>
+
+      <p class="legal-note">This waiver is a legal document. By submitting the form above, you are signing a binding release of liability. Questions about the event or this form can be sent to <a href="mailto:evans.adrian801@gmail.com">evans.adrian801@gmail.com</a>.</p>
     </section>
   
 

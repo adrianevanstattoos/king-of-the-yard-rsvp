@@ -5,6 +5,9 @@ const ageOutput = document.querySelector("#calculatedAge");
 const minorSection = document.querySelector("#minorSection");
 const waiverCopy = document.querySelector("#waiverText");
 const submitButton = form.querySelector('button[type="submit"]');
+const confirmationPanel = document.querySelector("#confirmationPanel");
+const confirmationDetail = document.querySelector("#confirmationDetail");
+const confirmationReset = document.querySelector("#confirmationReset");
 const EVENT_DATE = "2026-09-26";
 
 function ageOnEventDate(dateOfBirth) {
@@ -93,12 +96,27 @@ form.addEventListener("submit", async (event) => {
 
     form.reset();
     updateMinorState();
-    message.className = "message success";
-    message.textContent = `You're registered. Waiver accepted at ${new Date(result.acceptedAt).toLocaleString()}.`;
+    message.className = "message";
+    message.textContent = "";
+
+    confirmationDetail.textContent =
+      `Waiver accepted at ${new Date(result.acceptedAt).toLocaleString()}. A confirmation record has been saved.`;
+    form.hidden = true;
+    confirmationPanel.hidden = false;
+    confirmationPanel.focus();
+    confirmationPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (error) {
     message.className = "message error";
     message.textContent = error.message || "Something went wrong. Try again.";
   } finally {
     submitButton.disabled = false;
   }
+});
+
+confirmationReset.addEventListener("click", () => {
+  confirmationPanel.hidden = true;
+  form.hidden = false;
+  message.className = "message";
+  message.textContent = "";
+  form.scrollIntoView({ behavior: "smooth", block: "start" });
 });
