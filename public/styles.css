@@ -27,8 +27,39 @@ body::before {
 }
 main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
 .hero { min-height: 100vh; display: grid; grid-template-columns: minmax(0, .95fr) minmax(320px, .65fr); gap: 52px; align-items: center; padding: 48px 0; }
+
+.hero-media { display: grid; gap: 22px; align-self: start; }
 .flyer-wrap { transform: rotate(-1deg); box-shadow: 12px 14px 0 rgba(39,39,199,.16); }
 .flyer { display: block; width: 100%; height: auto; }
+.parking-map-wrap {
+  padding: 18px;
+  box-shadow: 12px 14px 0 rgba(240,55,34,.16);
+}
+.parking-map-head h2 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  text-transform: uppercase;
+  line-height: .95;
+  letter-spacing: -0.04em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.parking-map-head p {
+  margin: 0 0 10px;
+}
+.parking-map-eyebrow {
+  color: var(--red);
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.parking-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--blue);
+  background: #fff;
+}
 .paper { background: #fff; border: 2px solid var(--blue); }
 .intro h1, .section-heading h2 { margin: 0; text-transform: uppercase; line-height: .9; letter-spacing: -0.06em; font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
 .intro h1 { font-size: clamp(4rem, 10vw, 8rem); color: var(--red); text-shadow: 4px 4px 0 var(--blue); }
@@ -66,7 +97,8 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(240,55,34,.2
 footer { padding: 26px 16px; text-align: center; color: var(--blue); font-weight: 900; }
 @media (max-width: 820px) {
   .hero { grid-template-columns: 1fr; min-height: auto; gap: 34px; }
-  .flyer-wrap { max-width: 620px; margin: 0 auto; }
+  .hero-media { max-width: 620px; margin: 0 auto; }
+  .flyer-wrap { max-width: none; margin: 0; }
   .intro { text-align: center; }
   .grid.two { grid-template-columns: 1fr; gap: 0; }
 }
